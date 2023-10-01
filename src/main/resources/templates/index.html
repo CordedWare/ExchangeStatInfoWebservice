@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Главное меню</title>
+    <h1>Информационно-статистический веб-сервис биржи</h1>
+    <img src="/images/scala.png" alt="Локальная картинка">
+</head>
+
+<body>
+
+<br>
+<form action="/summary" method="post">
+    <a href="/summary">Перейти на страницу Сводные данные</a>
+</form>
+
+<br>
+<h4>Здесь можно сохранить информацию</h4>
+
+<form action="/insertSecurities" method="post">
+    <th>secid</th>
+    <input type="secid" name="secid">
+    <th>regnumber</th>
+    <input type="regnumber" name="regnumber">
+    <th>shortname</th>
+    <input type="name" name="name">
+    <th>emitent_title</th>
+    <input type="emitentTitle" name="emitentTitle">
+    <button type="submit">Сохранить</button>
+</form>
+
+<br>
+<h4>Загрузить XML-файл</h4>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".xml">
+    <button type="submit">Загрузить</button>
+</form>
+
+<br>
+<form action="/getApiHistories" method="get">
+    <button type="submit">Запросить историю торгов через портал</button>
+</form>
+
+<br>
+<form action="/deleteAll" method="post">
+    <button type="submit">Удалить данные</button>
+</form>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
